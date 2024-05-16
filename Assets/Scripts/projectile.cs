@@ -23,5 +23,9 @@ public class projectile : MonoBehaviour
             // collision.transform.position = new Vector3(-74, 36.3f, 0);
             collision.GetComponent<Player>().playBurntScreen();
         }
+        else
+        {
+            Destroy(this);
+        }
     }
 }

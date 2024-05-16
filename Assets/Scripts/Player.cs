@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(myRigidBody.velocity.x) > maxSpeed && !isSuperSpeedActive)
         {
             isSuperSpeedActive = true;
-            myspriteRenderer.color = Color.red; // Change sprite color to red
+            myspriteRenderer.color = Color.white; // Change sprite color to red
         }
 
         // Handle super speed state

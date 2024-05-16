@@ -34,6 +34,7 @@ public class DemonVoid : MonoBehaviour
             transform.localScale = Vector3.one * 5;
             collision.GetComponent<SpriteRenderer>().sprite = deadSprite;
             collision.GetComponent<Animator>().enabled = false;
+            collision.GetComponent<Player>().enabled = false;
         }
     }
 }

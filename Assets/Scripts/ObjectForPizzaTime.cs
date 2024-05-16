@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakableWall : MonoBehaviour
+public class ObjectForPizzaTime : MonoBehaviour
 {
+    public PizzaTime myPizzaTime;
+
+    private void Start()
+    {
+        myPizzaTime = FindObjectOfType<PizzaTime>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Player")
@@ -13,6 +19,7 @@ public class BreakableWall : MonoBehaviour
             Debug.Log("SuperSpeed == " + player.isSuperSpeedActive);
             if (player.isSuperSpeedActive == true)
             {
+                myPizzaTime.isPizzaTime = true;
                 this.gameObject.SetActive(false);
             }
         }
@@ -27,6 +34,7 @@ public class BreakableWall : MonoBehaviour
             Debug.Log("SuperSpeed == " + player.isSuperSpeedActive);
             if (player.isSuperSpeedActive == true)
             {
+                myPizzaTime.isPizzaTime = true;
                 this.gameObject.SetActive(false);
             }
         }
